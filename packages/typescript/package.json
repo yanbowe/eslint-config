@@ -1,0 +1,23 @@
+{
+  "name": "@soybeanjs/eslint-config-typescript",
+  "version": "0.0.1",
+  "private": true,
+  "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
+  "license": "MIT",
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "peerDependencies": {
+    "eslint": ">=7.4.0",
+    "typescript": ">=3.9"
+  },
+  "dependencies": {
+    "@soybeanjs/eslint-config-basic": "workspace:^0.0.1",
+    "@typescript-eslint/eslint-plugin": "^5.33.0",
+    "@typescript-eslint/parser": "^5.33.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.21.0"
+  }
+}
