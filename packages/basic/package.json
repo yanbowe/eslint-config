@@ -1,6 +1,6 @@
 {
   "name": "@soybeanjs/eslint-config-basic",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Soybean's eslint config presets with prettier",
   "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
   "license": "MIT",
