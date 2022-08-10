@@ -1,7 +1,7 @@
 {
   "name": "@soybeanjs/eslint-config",
   "version": "0.2.0",
-  "description": "Soybean's basic eslint config with prettier",
+  "description": "Soybean's eslint config presets with prettier",
   "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
   "license": "MIT",
   "main": "index.js",
@@ -9,8 +9,8 @@
     "index.js"
   ],
   "dependencies": {
-    "@soybeanjs/eslint-config-react": "workspace:^0.0.1",
-    "@soybeanjs/eslint-config-vue": "workspace:^0.0.1"
+    "@soybeanjs/eslint-config-react": "workspace:^0.2.0",
+    "@soybeanjs/eslint-config-vue": "workspace:^0.2.0"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0",
