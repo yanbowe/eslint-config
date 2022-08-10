@@ -12,7 +12,7 @@
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@soybeanjs/eslint-config": "workspace:^0.2.2",
+    "@soybeanjs/eslint-config": "workspace:latest",
     "bumpp": "^8.2.1",
     "eslint": "^8.21.0",
     "typescript": "^4.7.4"

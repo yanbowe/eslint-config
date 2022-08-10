@@ -9,7 +9,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@soybeanjs/eslint-config-ts": "workspace:^0.2.2",
+    "@soybeanjs/eslint-config-ts": "workspace:latest",
     "eslint-plugin-vue": "^9.3.0"
   },
   "peerDependencies": {

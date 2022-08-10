@@ -41,7 +41,6 @@ module.exports = {
   overrides: [
     {
       files: '*.html',
-      parser: 'html-eslint-parser',
       rules: {
         'prettier/prettier': ['error', { parser: 'html' }]
       }

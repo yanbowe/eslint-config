@@ -9,7 +9,7 @@
     "index.js"
   ],
   "dependencies": {
-    "@soybeanjs/eslint-config-ts": "workspace:^0.2.2",
+    "@soybeanjs/eslint-config-ts": "workspace:latest",
     "eslint-plugin-react": "^7.30.1"
   },
   "peerDependencies": {
