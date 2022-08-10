@@ -14,46 +14,6 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': ['error', 'interface'],
 
     // Override JS
-    indent: 'off',
-    '@typescript-eslint/indent': [
-      'error',
-      2,
-      {
-        SwitchCase: 1,
-        VariableDeclarator: 1,
-        outerIIFEBody: 1,
-        MemberExpression: 1,
-        FunctionDeclaration: { parameters: 1, body: 1 },
-        FunctionExpression: { parameters: 1, body: 1 },
-        CallExpression: { arguments: 1 },
-        ArrayExpression: 1,
-        ObjectExpression: 1,
-        ImportDeclaration: 1,
-        flatTernaryExpressions: false,
-        ignoreComments: false,
-        ignoredNodes: [
-          'TemplateLiteral *',
-          'JSXElement',
-          'JSXElement > *',
-          'JSXAttribute',
-          'JSXIdentifier',
-          'JSXNamespacedName',
-          'JSXMemberExpression',
-          'JSXSpreadAttribute',
-          'JSXExpressionContainer',
-          'JSXOpeningElement',
-          'JSXClosingElement',
-          'JSXFragment',
-          'JSXOpeningFragment',
-          'JSXClosingFragment',
-          'JSXText',
-          'JSXEmptyExpression',
-          'JSXSpreadChild',
-          'TSTypeParameterInstantiation'
-        ],
-        offsetTernaryExpressions: true
-      }
-    ],
     'no-unused-vars': 'off',
     '@typescript-eslint/no-unused-vars': [
       'error',

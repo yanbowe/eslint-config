@@ -162,7 +162,6 @@ module.exports = {
   rules: {
     // import
     'import/no-mutable-exports': 'error',
-    'sort-imports': 'error',
 
     // common
     curly: 'error',
@@ -196,7 +195,6 @@ module.exports = {
 
     // best-practice
     'consistent-return': 'error',
-    complexity: ['error', 6],
     eqeqeq: 'error',
     'no-alert': 'warn',
     'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
@@ -224,6 +222,18 @@ module.exports = {
     'unicorn/prefer-type-error': 'error',
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
+
+    // md
+    'md/remark': [
+      'error',
+      {
+        plugins: [
+          'remark-preset-lint-markdown-style-guide',
+          ['lint-maximum-line-length', false],
+          ['remark-lint-list-item-indent', 'space']
+        ]
+      }
+    ],
 
     // yml
     'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
