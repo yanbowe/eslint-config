@@ -1,7 +1,6 @@
 {
   "name": "@soybeanjs/eslint-config",
   "version": "0.2.0",
-  "private": true,
   "description": "Soybean's basic eslint config with prettier",
   "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
   "license": "MIT",
