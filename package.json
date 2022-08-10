@@ -9,7 +9,8 @@
     "prepare": "pnpm -r run stub",
     "lint": "eslint .",
     "test": "pnpm -r run test",
-    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
+    "pub": "pnpm -r publish --access public",
+    "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm pub"
   },
   "devDependencies": {
     "@soybeanjs/eslint-config": "workspace:latest",
