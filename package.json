@@ -1,6 +1,6 @@
 {
   "name": "@soybeanjs/eslint-config-monorepo",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
   "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
   "license": "MIT",
@@ -11,7 +11,7 @@
     "release": "bumpp package.json packages/*/package.json --commit --push --tag && pnpm -r publish --access public"
   },
   "devDependencies": {
-    "@soybeanjs/eslint-config-basic": "workspace:^0.0.1",
+    "@soybeanjs/eslint-config": "workspace:^0.0.1",
     "bumpp": "^8.2.1",
     "eslint": "^8.21.0",
     "typescript": "^4.7.4"

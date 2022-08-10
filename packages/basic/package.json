@@ -1,7 +1,8 @@
 {
   "name": "@soybeanjs/eslint-config-basic",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "private": true,
+  "description": "Soybean's basic eslint config with prettier",
   "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
   "license": "MIT",
   "main": "index.js",
@@ -10,9 +11,6 @@
   ],
   "scripts": {
     "lint": "eslint . --config=index.js"
-  },
-  "peerDependencies": {
-    "eslint": ">=7.4.0"
   },
   "dependencies": {
     "eslint-config-prettier": "^8.5.0",
@@ -29,6 +27,9 @@
     "jsonc-eslint-parser": "^2.1.0",
     "prettier": "^2.7.1",
     "yaml-eslint-parser": "^1.1.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=7.4.0"
   },
   "devDependencies": {
     "eslint": "^8.21.0"

@@ -24,7 +24,7 @@ module.exports = {
     'coverage',
     'public',
     'temp',
-    'packages-lock.json',
+    'package-lock.json',
     'pnpm-lock.yaml',
     'yarn.lock',
     '__snapshots__',
@@ -39,6 +39,13 @@ module.exports = {
     }
   },
   overrides: [
+    {
+      files: '*.html',
+      parser: 'html-eslint-parser',
+      rules: {
+        'prettier/prettier': ['error', { parser: 'html' }]
+      }
+    },
     {
       files: ['*.json', '*.json5'],
       parser: 'jsonc-eslint-parser',
@@ -58,8 +65,7 @@ module.exports = {
       files: ['*.yaml', '*.yml'],
       parser: 'yaml-eslint-parser',
       rules: {
-        'spaced-comment': 'off',
-        'prettier/prettier': ['error', { parser: 'yaml' }]
+        'spaced-comment': 'off'
       }
     },
     {
@@ -102,9 +108,9 @@ module.exports = {
               'activationEvents',
               'contributes',
               'scripts',
+              'dependencies',
               'peerDependencies',
               'peerDependenciesMeta',
-              'dependencies',
               'optionalDependencies',
               'devDependencies',
               'pnpm',
@@ -156,41 +162,15 @@ module.exports = {
   ],
   rules: {
     // import
-    'import/order': 'error',
-    'import/first': 'error',
     'import/no-mutable-exports': 'error',
-    'import/no-unresolved': 'off',
-    'import/no-absolute-path': 'off',
+    'sort-imports': 'error',
 
-    // Common
-    curly: ['error', 'multi-or-nest', 'consistent'],
-    'no-unused-vars': 'warn',
-    'no-param-reassign': 'off',
-    'array-bracket-spacing': ['error', 'never'],
-    'brace-style': ['error', 'stroustrup', { allowSingleLine: true }],
-    'block-spacing': ['error', 'always'],
-    camelcase: 'off',
-    'comma-spacing': ['error', { before: false, after: true }],
-    'comma-style': ['error', 'last'],
-    'no-constant-condition': 'warn',
-    'no-debugger': 'error',
+    // common
+    curly: 'error',
+    'no-constant-condition': 'error',
     'no-console': ['error', { allow: ['warn', 'error'] }],
-    'no-cond-assign': ['error', 'always'],
-    'func-call-spacing': ['off', 'never'],
-    'key-spacing': ['error', { beforeColon: false, afterColon: true }],
-    indent: ['error', 2, { SwitchCase: 1, VariableDeclarator: 1, outerIIFEBody: 1 }],
     'no-restricted-syntax': ['error', 'DebuggerStatement', 'LabeledStatement', 'WithStatement'],
-    'object-curly-spacing': ['error', 'always'],
-    'no-return-await': 'off',
-    'space-before-function-paren': [
-      'error',
-      {
-        anonymous: 'always',
-        named: 'never',
-        asyncArrow: 'always'
-      }
-    ],
-    'no-multiple-empty-lines': ['error', { max: 1, maxBOF: 0, maxEOF: 1 }],
+    'no-return-await': 'error',
 
     // es6
     'no-var': 'error',
@@ -199,13 +179,6 @@ module.exports = {
       {
         destructuring: 'any',
         ignoreReadBeforeAssign: true
-      }
-    ],
-    'prefer-arrow-callback': [
-      'error',
-      {
-        allowNamedFunctions: false,
-        allowUnboundThis: true
       }
     ],
     'object-shorthand': [
@@ -217,45 +190,17 @@ module.exports = {
       }
     ],
     'prefer-exponentiation-operator': 'error',
-    'prefer-rest-params': 'error',
     'prefer-spread': 'error',
     'prefer-template': 'error',
-    'template-curly-spacing': 'error',
-    'arrow-parens': ['error', 'as-needed', { requireForBlockBody: true }],
-    'generator-star-spacing': 'off',
-    'spaced-comment': [
-      'error',
-      'always',
-      {
-        line: {
-          markers: ['/'],
-          exceptions: ['/', '#']
-        },
-        block: {
-          markers: ['!'],
-          exceptions: ['*'],
-          balanced: true
-        }
-      }
-    ],
+    'arrow-parens': ['error', 'as-needed'],
+    'generator-star-spacing': ['error', { before: true, after: false }],
 
     // best-practice
-    'array-callback-return': 'error',
-    'block-scoped-var': 'error',
-    'consistent-return': 'off',
-    complexity: ['off', 11],
-    eqeqeq: ['error', 'smart'],
+    'consistent-return': 'error',
+    complexity: ['error', 6],
+    eqeqeq: 'error',
     'no-alert': 'warn',
-    'no-case-declarations': 'error',
-    'no-multi-spaces': 'error',
-    'no-multi-str': 'error',
-    'no-with': 'error',
-    'no-void': 'error',
-    'no-useless-escape': 'off',
-    'vars-on-top': 'error',
-    'require-await': 'off',
-    'no-return-assign': 'off',
-    'operator-linebreak': ['error', 'before'],
+    'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
 
     // unicorns
     // Pass error message when throwing errors
@@ -281,26 +226,32 @@ module.exports = {
     // Use new when throwing error
     'unicorn/throw-new-error': 'error',
 
-    'no-use-before-define': ['error', { functions: false, classes: false, variables: true }],
-    'eslint-comments/disable-enable-pair': 'off',
-    'import/no-named-as-default-member': 'off',
-    'import/no-named-as-default': 'off',
-    'import/namespace': 'off',
-    'n/no-callback-literal': 'off',
+    // yml
+    'yml/quotes': ['error', { prefer: 'single', avoidEscape: false }],
+    'yml/no-empty-document': 'off',
 
-    'sort-imports': [
+    // prettier
+    'prettier/prettier': [
       'error',
       {
-        ignoreCase: false,
-        ignoreDeclarationSort: true,
-        ignoreMemberSort: false,
-        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-        allowSeparatedGroups: false
+        arrowParens: 'avoid',
+        bracketSameLine: false,
+        bracketSpacing: true,
+        embeddedLanguageFormatting: 'auto',
+        htmlWhitespaceSensitivity: 'css',
+        insertPragma: false,
+        jsxSingleQuote: false,
+        printWidth: 120,
+        proseWrap: 'preserve',
+        quoteProps: 'as-needed',
+        requirePragma: false,
+        semi: true,
+        singleQuote: true,
+        tabWidth: 2,
+        trailingComma: 'none',
+        useTabs: false,
+        vueIndentScriptAndStyle: false
       }
-    ],
-
-    // yml
-    'yml/quotes': 'error',
-    'yml/no-empty-document': 'off'
+    ]
   }
 };

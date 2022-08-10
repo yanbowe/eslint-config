@@ -1,5 +1,5 @@
 {
-  "name": "@soybeanjs/eslint-config-ts",
+  "name": "@soybeanjs/eslint-config-react",
   "version": "0.1.0",
   "private": true,
   "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
@@ -9,9 +9,8 @@
     "index.js"
   ],
   "dependencies": {
-    "@soybeanjs/eslint-config-basic": "workspace:^0.0.1",
-    "@typescript-eslint/eslint-plugin": "^5.33.0",
-    "@typescript-eslint/parser": "^5.33.0"
+    "@soybeanjs/eslint-config-ts": "workspace:^0.0.1",
+    "eslint-plugin-react": "^7.30.1"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0",
