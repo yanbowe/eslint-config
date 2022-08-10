@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@soybeanjs/eslint-config': workspace:^0.2.0
+      '@soybeanjs/eslint-config': workspace:^0.2.2
       bumpp: ^8.2.1
       eslint: ^8.21.0
       typescript: ^4.7.4
@@ -16,8 +16,8 @@ importers:
 
   packages/all:
     specifiers:
-      '@soybeanjs/eslint-config-react': workspace:^0.2.0
-      '@soybeanjs/eslint-config-vue': workspace:^0.2.0
+      '@soybeanjs/eslint-config-react': workspace:^0.2.2
+      '@soybeanjs/eslint-config-vue': workspace:^0.2.2
       eslint: ^8.21.0
     dependencies:
       '@soybeanjs/eslint-config-react': link:../react
@@ -62,7 +62,7 @@ importers:
 
   packages/react:
     specifiers:
-      '@soybeanjs/eslint-config-ts': workspace:^0.2.0
+      '@soybeanjs/eslint-config-ts': workspace:^0.2.2
       eslint: ^8.21.0
       eslint-plugin-react: ^7.30.1
     dependencies:
@@ -73,7 +73,7 @@ importers:
 
   packages/typescript:
     specifiers:
-      '@soybeanjs/eslint-config-basic': workspace:^0.2.0
+      '@soybeanjs/eslint-config-basic': workspace:^0.2.2
       '@typescript-eslint/eslint-plugin': ^5.33.0
       '@typescript-eslint/parser': ^5.33.0
       eslint: ^8.21.0
@@ -86,7 +86,7 @@ importers:
 
   packages/vue:
     specifiers:
-      '@soybeanjs/eslint-config-ts': workspace:^0.2.0
+      '@soybeanjs/eslint-config-ts': workspace:^0.2.2
       eslint: ^8.21.0
       eslint-plugin-vue: ^9.3.0
     dependencies:
