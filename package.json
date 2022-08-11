@@ -1,6 +1,6 @@
 {
   "name": "@soybeanjs/eslint-config-monorepo",
-  "version": "0.2.6",
+  "version": "0.2.7",
   "private": true,
   "description": "Soybean's eslint config presets with prettier",
   "author": "Soybean <honghuangdc@gmail.com> (https://github.com/honghuangdc)",
