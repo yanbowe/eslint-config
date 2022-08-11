@@ -35,6 +35,13 @@ module.exports = {
   plugins: ['html', 'unicorn'],
   settings: {
     'import/resolver': {
+      alias: {
+        map: [
+          ['~', '.'],
+          ['@', './src']
+        ],
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', 'mts', '.d.ts']
+      },
       node: { extensions: ['.js', '.jsx', '.mjs', 'cjs'] }
     }
   },
@@ -230,6 +237,7 @@ module.exports = {
         plugins: [
           'remark-preset-lint-markdown-style-guide',
           ['lint-maximum-line-length', false],
+          ['remark-lint-table-pipe-alignment', false],
           ['remark-lint-list-item-indent', 'space']
         ]
       }

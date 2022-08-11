@@ -5,6 +5,7 @@
 - Lint also for json, yaml, markdown
 - Sorted imports, dangling commas for cleaner commit diff
 - Reasonable defaults, best practices, only one-line of config
+- default alias @ => src, ~ => ./ (root)
 
 ## Usage
 
@@ -23,6 +24,24 @@ pnpm add -D eslint @soybeanjs/eslint-config
 ```
 
 You don't need .eslintignore normally as it has been provided by the preset.
+
+### change import alias
+
+```json
+{
+  "settings": {
+    "import/resolver": {
+      "alias": {
+        "map": [
+          ["~", "."],
+          ["@", "./src"]
+        ],
+        "extensions": [".js", ".jsx", ".mjs", ".ts", ".tsx", "mts", ".d.ts"]
+      }
+    }
+  }
+}
+```
 
 ### Add script for package.json
 
