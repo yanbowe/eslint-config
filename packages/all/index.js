@@ -1,3 +1,3 @@
 module.exports = {
-  extends: ['@soybeanjs/eslint-config-vue', '@soybeanjs/eslint-config-react']
+  extends: ['@soybeanjs/eslint-config-react', '@soybeanjs/eslint-config-vue']
 };

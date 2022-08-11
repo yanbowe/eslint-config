@@ -35,6 +35,13 @@ module.exports = {
   plugins: ['html', 'unicorn'],
   settings: {
     'import/resolver': {
+      alias: {
+        map: [
+          ['~', '.'],
+          ['@', './src']
+        ],
+        extensions: ['.js', '.jsx', '.mjs', '.ts', '.tsx', 'mts', '.d.ts']
+      },
       node: { extensions: ['.js', '.jsx', '.mjs', 'cjs'] }
     }
   },

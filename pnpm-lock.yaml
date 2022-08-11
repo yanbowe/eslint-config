@@ -29,6 +29,7 @@ importers:
     specifiers:
       eslint: ^8.21.0
       eslint-config-prettier: ^8.5.0
+      eslint-import-resolver-alias: ^1.1.2
       eslint-plugin-eslint-comments: ^3.2.0
       eslint-plugin-html: ^7.1.0
       eslint-plugin-import: ^2.26.0
@@ -44,6 +45,7 @@ importers:
       yaml-eslint-parser: ^1.1.0
     dependencies:
       eslint-config-prettier: 8.5.0_eslint@8.21.0
+      eslint-import-resolver-alias: 1.1.2_fkfqfehjtk7sk2efaqbgxsuasa
       eslint-plugin-eslint-comments: 3.2.0_eslint@8.21.0
       eslint-plugin-html: 7.1.0
       eslint-plugin-import: 2.26.0_eslint@8.21.0
@@ -65,11 +67,15 @@ importers:
       '@soybeanjs/eslint-config-ts': workspace:latest
       eslint: ^8.21.0
       eslint-plugin-react: ^7.30.1
+      react: ^18.2.0
+      typescript: ^4.7.4
     dependencies:
       '@soybeanjs/eslint-config-ts': link:../typescript
       eslint-plugin-react: 7.30.1_eslint@8.21.0
     devDependencies:
       eslint: 8.21.0
+      react: 18.2.0
+      typescript: 4.7.4
 
   packages/typescript:
     specifiers:
@@ -782,6 +788,15 @@ packages:
       eslint: '>=7.0.0'
     dependencies:
       eslint: 8.21.0
+    dev: false
+
+  /eslint-import-resolver-alias/1.1.2_fkfqfehjtk7sk2efaqbgxsuasa:
+    resolution: {integrity: sha512-WdviM1Eu834zsfjHtcGHtGfcu+F30Od3V7I9Fi57uhBEwPkjDcii7/yW8jAT+gOhn4P/vOxxNAXbFAKsrrc15w==}
+    engines: {node: '>= 4'}
+    peerDependencies:
+      eslint-plugin-import: '>=1.4.0'
+    dependencies:
+      eslint-plugin-import: 2.26.0_eslint@8.21.0
     dev: false
 
   /eslint-import-resolver-node/0.3.6:
@@ -1714,7 +1729,6 @@ packages:
 
   /js-tokens/4.0.0:
     resolution: {integrity: sha512-RdJUflcE3cUzKiMqQgsCu06FPu9UdIJO0beYbPhHN4k6apgJtifcoCtT9bcxOpYBtpD2kCM6Sbzg4CausW/PKQ==}
-    dev: false
 
   /js-yaml/3.14.1:
     resolution: {integrity: sha512-okMH7OXXJ7YrN9Ok3/SXrnu4iX9yOk+25nqX4imS2npuvTYDmo/QEZoqwZkYaIDk3jVvBOTOIEgEhaLOynBS9g==}
@@ -1831,7 +1845,6 @@ packages:
     hasBin: true
     dependencies:
       js-tokens: 4.0.0
-    dev: false
 
   /lru-cache/6.0.0:
     resolution: {integrity: sha512-Jo6dJ04CmSjuznwJSS3pUeWmd/H0ffTlkXXgwZi+eq1UCmqQwCh+eLsYOYCwY991i2Fah4h1BEMCx4qThGbsiA==}
@@ -2230,6 +2243,13 @@ packages:
   /react-is/16.13.1:
     resolution: {integrity: sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==}
     dev: false
+
+  /react/18.2.0:
+    resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
+    engines: {node: '>=0.10.0'}
+    dependencies:
+      loose-envify: 1.4.0
+    dev: true
 
   /read-pkg-up/7.0.1:
     resolution: {integrity: sha512-zK0TB7Xd6JpCLmlLmufqykGE+/TlOePD6qKClNW7hHDKFh/J7/7gCWGR7joEQEW1bKq3a3yUZSObOoWLFQ4ohg==}
