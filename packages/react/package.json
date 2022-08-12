@@ -10,14 +10,14 @@
   ],
   "dependencies": {
     "@soybeanjs/eslint-config-ts": "workspace:latest",
-    "eslint-plugin-react": "^7.30.1"
+    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react-hooks": "^4.6.0"
   },
   "peerDependencies": {
     "eslint": ">=7.4.0"
   },
   "devDependencies": {
     "eslint": "^8.21.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
     "react": "^18.2.0",
     "typescript": "^4.7.4"
   }
